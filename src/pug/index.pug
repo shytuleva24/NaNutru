@@ -4,294 +4,134 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0, user-scelable=yes, maximum-scale=3.0, minimum-scale=1.0")
-        title Repair Design Project
+        title Головне Україна
         link(rel="stylesheet", href="css/styles.css")
-        link(rel="preconnect" href="https://fonts.googleapis.com")
-        link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
-        link(href="https://fonts.googleapis.com/css?family=Nunito+Sans|Yeseva+One&display=swap" rel="stylesheet")    
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
     body 
-        .overflowX-hidden
-            header.header 
-                .header-container.container
-                    .logo-container
-                        a.logo(href="#") IC "Repair Design Project"
-                    nav.navbar 
-                        ul.navbar__menu 
-                            li.navbar__item
-                                a.navbar__link.flowing-scroll(href="#home") Home
-                            li.navbar__item 
-                                a.navbar__link.flowing-scroll(href="#projects") Projects
-                            li.navbar__item
-                                a.navbar__link.flowing-scroll(href="#measurement") Measurement
-                            li.navbar__item
-                                a.navbar__link.flowing-scroll(href="#team") Team
-                            li.navbar__item
-                                a.navbar__link.flowing-scroll(href="#reviews") Reviews
-                            li.navbar__item
-                                a.navbar__link.flowing-scroll(href="#contacts") Contacts
-                    .connection
-                        a.connection__phone.link-phone(href="tel:+380999999999") +38 (099) 999-99-99
-                        button.connection__btn.btn.flowing-scroll(href='#questionsForm') Request a call
+        .overflow-hidden
+            header.home
+                .wrapper
+                    .home-info
+                        a.logo(href="/")  
+                            img(src="img/showName.png", alt="")
+                        .home-time
+                            p КОЖНУ 
+                            span.start-day СУБОТУ 
+                            p.start-time о 20:00
             main 
-                section.home#home
-                    .home__container.container
-                        .home__content 
-                            h1.home__title.title Turnkey Repair in the city of 
-                                span.selection Kiev
-                            p.home__text Get ready-made turnkey repairs on time with work time saving up to 45 days and 20% from cost of materials due to the organization of work
-                            .home__connection 
-                                button.home__btn.btn calculate the cost
-                                button.home__btn.btn submit your application
-                section.projects
-                    .projects__container.container#projects
-                        ul.projects__nav.animated-element
-                            li.projects__item.title.activeSlide Kiev, Admiral
-                            li.projects__item.title Kharkiv Thieves
-                            li.projects__item.title Khmelnitskiy Patriotic
-                        h2.projects-title.projects-title__mobile.title Completed projects
-                        p.projects-text.projects-text__mobile Only a small part of the work performed by our company is presented on the site. For 14 years on in the construction market we have made happy more than 1000 families
-                        .projects__content
-                            .projects__detail
-                                .projects__header
-                                    h2.projects-title.title.animated-element Completed projects
-                                    p.projects-text.animated-element Only a small part of the work performed by our company is presented on the site. For 14 years on in the construction market we have made happy more than 1000 families
-                                .projects-description
-                                    .projects-description__item.animated-element
-                                        h3.projects-description__title.selection.title City:
-                                        p.projects-description__text Kiev LCD admir
-                                    .projects-description__item.animated-element
-                                        h3.projects-description__title.selection.title apartment area:
-                                        p.projects-description__text 81 m2
-                                    .projects-description__item.animated-element
-                                        h3.projects-description__title.selection.title Repair time:
-                                        p.projects-description__text 3.5 months
-                                    .projects-description__item.animated-element
-                                        h3.projects-description__title.selection.title Repair Cost:
-                                        p.projects-description__text Upon request
-                                .projects-arrows
-                                    img.projects-arrow.projects-arrow__left(src="img/projects/arrow.png", alt="arrow")
-                                    .projects-dots
-                                        span.projects-dots__item.activeSlide
-                                        span.projects-dots__item
-                                        span.projects-dots__item
-                                    img.projects-arrow.projects-arrow__right(src="img/projects/arrow.png", alt="arrow")
-                            .projects-photos.slider.animated-element
-                                img.projects-photos__img.slides.activeSlide(src="img/projects/projects1.jpg", alt="photo of the completed project")
-                                img.projects-photos__img.slides(src="img/projects/projects2.jpg", alt="photo of the completed project")
-                                img.projects-photos__img.slides(src="img/projects/projects3.jpg", alt="photo of the completed project")
-                section.control
-                    .control__container.container 
-                        .control__header 
-                            h3.control__title.title.animated-element online control
-                            .control__icon.icon.animated-element
-                                img(src="img/control/control-logo.svg", alt="cam")
-                        .control-video.animated-element
-                            img(src="img/control/control.jpg", alt="video")
-                            span.control-video__play
-                        hr.dividing-line
-                        p.control-text.animated-element At each facility, a camera is installed that broadcasts the progress of work on the clock. At any time, you can go to our website and monitor the progress of work in your apartment. You can watch the live broadcast from one of our facilities! Leave a request below and you will receive a link to the broadcast.
-                        form.control-form.animated-element(action="index.html" method="POST") 
-                            .control-form__main
-                                label.control-form__label.form-label(for="controlName") Name
-                                    input.control-form__input.form-input(type="text" name="controlName" id="controlName" placeholder="What is your name:")
-                                label.control-form__label.form-label(for="controlPhone") Phone
-                                    input.control-form__input.form-input(type="tel" name="controlPhone" id="controlPhone" placeholder="What is your number:")
-                                button.control-form__button.btn Submit
-                            .checkbox-container
-                                input.checkbox-input(type="checkbox" name="controlCheckbox" id="controlCheckbox")
-                                label.control-form__label.form-label.checkbox-label(for="controlCheckbox") I agree to the processing of personal data
-                section.types-repair
-                    .types-repair__container.container.animated-element#measurement
-                        .types-repair__header 
-                            h3.types-repair__title.title.animated-element Types of repair
-                            .types-repair__icon.icon.animated-element
-                                img(src="img/types-repair/types-repair-logo.svg", alt="types repair")
-                        .types-repair__content
-                            .types-repair__cards
-                                .repair-item.animated-element 
-                                    .repair-item__img
-                                        img(src="img/types-repair/image1.jpg", alt="Redecorating")
-                                    .repair-item__content
-                                        h4.repair-item__title.title Redecorating
-                                        ul.repair-item__text 
-                                            li Dismantling of old coatings
-                                            li Wallpapering
-                                            li Painting walls and ceilings
-                                            li Laying flooring
-                                            li Replacing plumbing
-                                            li Replacing sockets and switches
-                                            li Replacing doors
-                                        button.repair-item__btn.btn from 900 uah / m2
-                                .repair-item.animated-element 
-                                    .repair-item__img
-                                        img(src="img/types-repair/image2.jpg", alt="Overhaul")
-                                    .repair-item__content
-                                        h4.repair-item__title.title Overhaul
-                                        ul.repair-item__text 
-                                            li Dismantling of old coatings
-                                            li Wallpapering
-                                            li Painting walls and ceilings
-                                            li Laying flooring
-                                            li Replacing plumbing
-                                            li Replacing sockets and switches
-                                            li Replacing doors
-                                        button.repair-item__btn.btn from 1800 uah / m2
-                                .repair-item.animated-element 
-                                    .repair-item__img
-                                        img(src="img/types-repair/image3.jpg", alt="Designer Repair")
-                                    .repair-item__content
-                                        h4.repair-item__title.title Designer Repair
-                                        ul.repair-item__text 
-                                            li Dismantling of old coatings
-                                            li Wallpapering
-                                            li Painting walls and ceilings
-                                            li Laying flooring
-                                            li Replacing plumbing
-                                            li Replacing sockets and switches
-                                            li Replacing doors
-                                        button.repair-item__btn.btn from 4000 uah / m2
-                section.measurement#team
-                    .measurement__container.container
-                        .measurement-content 
-                            .measurement-content__item.animated-element 
-                                .measurement-content__number.title 01
-                                .measurement-content__text Our specialist will arrive for measurements per day contact, or appoint a date convenient for you
-                            .measurement-content__item.animated-element 
-                                .measurement-content__number.title 02
-                                .measurement-content__text Free metering
-                            .measurement-content__item.animated-element 
-                                .measurement-content__number.title 03
-                                .measurement-content__text Free consultation
-                            .measurement-content__item.animated-element 
-                                .measurement-content__number.title 04
-                                .measurement-content__text Get a cost estimate and the timing of your future repairs
-                        form.measurement-form.animated-element(action="index.html", method="post") 
-                            p.measurement-form__title Leave a request for free departure of the measurer
-                            .measurement-form__content
-                                label.measurement-form__label.form-label(for="measurementFormName") Name
-                                input.measurement-form__input.form-input(type="text" id="measurementFormName" placeholder="What is your name:")
-                                label.measurement-form__label.form-label(for="measurementFormPhone") Phone
-                                input.measurement-form__input.form-input(type="tel" id="measurementFormPhone" placeholder="Your phone number:") 
-                                label.measurement-form__label.form-label(for="measurementFormMail") Email
-                                input.measurement-form__input.form-input(type="mail" id="measurementFormMail" placeholder="Your email:")
-                            .checkbox-container
-                                input.checkbox-input(type="checkbox" id="measurementCheckbox")
-                                label.form-label.checkbox-label(for="measurementCheckbox") I agree to the processing of personal data
-                            p.button-container
-                                button.measurement-form__button.btn Call the measurer
-                section.sale__container.container
-                    .sale__content.animated-element
-                        .sale__icon 
-                            img(src="img/measurement/sale-icon.svg", alt="sale")
-                        .sale__text Help save 10 - 20% of the cost of materials
-                section.repair-styles
-                    .repair-styles__bg
-                        .repair-styles__container.container
-                            .repair-styles__content 
-                                h3.repair-styles__title.title.animated-element We realize your wildest fantasies
-                                a.repair-styles__link.animated-element(href="#") American classic
-                                a.repair-styles__link.animated-element(href="#") Empire
-                                a.repair-styles__link.animated-element(href="#") Classical
-                                a.repair-styles__link.animated-element(href="#") Loft
-                                a.repair-styles__link.animated-element(href="#") Minimalism
-                                a.repair-styles__link.animated-element(href="#") Provence
-                                a.repair-styles__link.animated-element(href="#") Romanticism
-                                a.repair-styles__link.animated-element(href="#") Scandinavian style
-                                a.repair-styles__link.animated-element(href="#") Mediterranean style
-                                a.repair-styles__link.animated-element(href="#") High tech
-                                a.repair-styles__link.animated-element(href="#") Eclecticism
-                            .styles-photos 
-                                .styles-photos__group
-                                    img.animated-element(src="img/styles-repair/photo1.jpg", alt="repair styles IC Repair Design Project")
-                                    img.animated-element(src="img/styles-repair/photo2.jpg", alt="repair styles IC Repair Design Project")
-                                .styles-photos__group
-                                    img.animated-element(src="img/styles-repair/photo3.jpg", alt="repair styles IC Repair Design Project")
-                                    img.animated-element(src="img/styles-repair/photo4.jpg", alt="repair styles IC Repair Design Project")
-                section.clients#reviews
-                    .clients__container.container
-                        .clients__header 
-                            h3.clients__title.title.animated-element our clients
-                            .clients__icon.icon.animated-element
-                                img(src="img/our-clients/our-clients.svg", alt="our clients")
-                            p.clients__text.animated-element 80% of our customers recommend us to their friends and family.
-                        .clients__content
-                            .clients-item.animated-element 
-                                .clients-item__header 
-                                    img.clients-item__photo(src="img/our-clients/photo1.jpg", alt="")
-                                    h4.clients-item__name.title Fedosova Maria Konstantinovna
-                                .clients-item__content 
-                                    p.clients-item__text I want to thank the guys for their work. We put your shower part in repair. I am very grateful that I referred to the repair as to my own. Great thanks I express the project to Georgia for its professionalism and approach.
-                                    p.clients-item__text The repair process was turned out in terms, faster than anticipated. Team mobile and professional. Works performed qualitatively without comments. Quality satisfied. Prices democratic. I recommend these masters.
-                                .clients-item__button
-                                    .clients-item__footage.title 40 m2
-                                    .clients-item__terms.title 48 DAYS
-                            .clients-item.animated-element 
-                                .clients-item__header 
-                                    img.clients-item__photo(src="img/our-clients/photo2.jpg", alt="")
-                                    h4.clients-item__name.title Afanasyev Sergey Alexandrovich
-                                .clients-item__content 
-                                    p.clients-item__text I want to thank the guys for their work. We put your shower part in repair. I am very grateful that I referred to the repair as to my own. Great thanks I express the project to Georgia for its professionalism and approach.
-                                    p.clients-item__text The repair process was turned out in terms, faster than anticipated. Team mobile and professional. Works performed qualitatively without comments. Quality satisfied. Prices democratic. I recommend these masters.
-                                .clients-item__button
-                                    .clients-item__footage.title 90 м2
-                                    .clients-item__terms.title 128 DAYS
-                            .clients-item.animated-element 
-                                .clients-item__header 
-                                    img.clients-item__photo(src="img/our-clients/photo3.jpg", alt="")
-                                    h4.clients-item__name.title Kiriev Egor Leonidovich
-                                .clients-item__content 
-                                    p.clients-item__text I want to thank the guys for their work. We put your shower part in repair. I am very grateful that I referred to the repair as to my own. Great thanks I express the project to Georgia for its professionalism and approach.
-                                    p.clients-item__text The repair process was turned out in terms, faster than anticipated. Team mobile and professional. Works performed qualitatively without comments. Quality satisfied. Prices democratic. I recommend these masters.
-                                .clients-item__button
-                                    .clients-item__footage.title 56 m2
-                                    .clients-item__terms.title 86 DAYS
-                section.questions-form
-                    form.questions-form__container.container#questionsForm(action="index.html", method="post") 
-                        h4.questions-form__title.title have any questions?
-                        .questions-form__contact
-                            .questions-form__row
-                                label.questions-form__label.form-label(for="questionsName") Name
-                                    input.questions-form__input.form-input(type="text", name="questionsName" id="questionsName" placeholder="What is your name:") 
-                                label.questions-form__label.form-label(for="questionsPhone") Phone
-                                    input.questions-form__input.form-input(type="tel", name="questionsPhone" id="questionsPhone" placeholder="Your phone number:") 
-                            .questions-form__row
-                                label.questions-form__label.form-label(for="question") Question
-                                    input.questions-form__input.form-input(type="text", name="question" id="question" placeholder="I want to know:") 
-                            .checkbox-container
-                                input.checkbox-input(type="checkbox" id="questionsCheckbox")
-                                label.form-label.checkbox-label(for="questionsCheckbox") I agree to the processing of personal data
-                            p.button-container
-                                button.questions-form__button.btn Call the measurer
-                section.contacts
-                    .contacts__container.container.animated-element#contacts
-                        h3.title.selection.contact-title Rostov-on-Don, Nansen St., 239 Shopping Center Decorum Tel 
-                            a.selection(href="tel:+39287683239") +3 (928) 768-32-39
-                        .contacts-social
-                            a(href="#") 
-                                <img src="img/contacts/mail.svg" alt="">
-                            a(href="#") 
-                                <img src="img/contacts/ig.svg" alt="">
-                        .contact-map 
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5044.3007197368115!2d30.466630691880997!3d50.48591342239612!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cdec53762c3f%3A0x921e13594fcabca3!2sKurenivskyi%20Park!5e0!3m2!1sru!2sua!4v1678122508706!5m2!1sru!2sua" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                footer.footer 
-                    .footer-container.container
-                        .logo-container
-                            a.logo(href="#") IC "Repair Design Project"
-                        nav.navbar 
-                            ul.navbar__menu 
-                                li.navbar__item
-                                    a.navbar__link.flowing-scroll(href="#home") Home
-                                li.navbar__item 
-                                    a.navbar__link.flowing-scroll(href="#projects") Projects
-                                li.navbar__item
-                                    a.navbar__link.flowing-scroll(href="#measurement") Measurement
-                                li.navbar__item
-                                    a.navbar__link.flowing-scroll(href="#team") Team
-                                li.navbar__item
-                                    a.navbar__link.flowing-scroll(href="#reviews") Reviews
-                                li.navbar__item
-                                    a.navbar__link.flowing-scroll(href="#contacts") Contacts
-                        .connection
-                            a.connection__phone.link-phone(href="tel:+380999999999") +38 (099) 999-99-99
-                            button.connection__btn.btn.flowing-scroll(href='#questionsForm') Request a call
-    script(src="js/scripts.js") 
+                .wrapper
+                    .post-content
+                        h1.title-post.red.anim-items.anim-show "Пенсіонери - відпрацьований матеріал, нехай мруть, їх не шкода. Якщо не тиск у серці, то щось інше їх вб’є. Немає сенсу витрачати кошти на старих!"
+                        p.publicist-information.anim-items.anim-show © Зам. гол. фармацевта України
+                        p.publicist-information.anim-items.anim-show.data Опублiковано: *дата - 5 дней*
+                        h2.sub-title.indent.anim-items.anim-show Декілька днів тому в соціальних мережах широко розлетівся скріншот скандального повідомлення Людмили Говорової, замісниці головного фармацевста України. Після розголосу, вона видалила свій аккаунт у Фейсбук. Але в нас залишився скріншот її запису, який ми вам демонструємо.
+                        .screen.indent.anim-items.anim-show
+                            img(src="img/screen.jpg", alt="Скріншот скандального повідомлення Людмили Говорової")
+                        p.indent.anim-items.anim-show Учора стало відомо, що Людмила Говорова і все керівництво департаменту фармацевтики звільнені і там проходить перевірка. Щоб зрозуміти суть, що відбувається, ми задали декілька питань голові департаменту фармацевтики України, представнику препарату та главі Научно-дослідницького інституту кардіології і внутрішніх захворювань України.
+                        .img.indent.anim-items.anim-show    
+                            img(src="img/postBG.jpg", alt="Головне Україна Фармацевтичний заговір")
+                        p.red.indent.anim-items.anim-show <span>Максим Кротов:</span> Як така людина може працювати в державних установах? За чий рахунок вона купила собі котедж в Конча-Заспі і регулярно відпочиває на курортах? <br>Чому такі люди вирішують долю унікального препарату від НДІ кардіології та внутрішніх захворювань України, який лікує серце і тиск, запобігаючи смерті? І який повинні видавати <strong>БЕЗКОШТОВНО</strong>, недивлячісь на ціну в 3500 грн. Сьогодні ми про все це дізнаємось!
+                        p.indent.anim-items.anim-show Максим Кротов: "Перше питання до Ірини Панкратової - глави департаменту фармацевтики та іммунології України. Як людина такого роду опинилась на такіх високій посаді?"
+                        .img.anim-items.anim-show  
+                            img(src="img/pankrotova.jpg", alt="Ірина Панкратова Глава департаменту фармацевтики та іммунології України")
+                        .indent.anim-items.anim-show
+                            p <strong>Ірина Панкратова: </strong>Щоб ви розуміли мою ситуацію, я призначена на посаду голови департаменту буквально три дні тому. Вся стара верхівка була звільнена, включаючи жінку про яку йде мова. Так що, на даний момент часу вона вже не знаходиться на державній службі і не має ніякого відношення до медицини в Україні. 
+                            p Причиною масового звільнення, як ви самі розумієте, стали підозри в корупції. Моє завдання провести ревізію всіх прийнятих рішень. Вже зараз я можу сказати, що цілу групу рішень старого керівництва потрібно переглянути.
+                        .indent.bold.anim-items.anim-show
+                            p <strong>Максим Кротов: </strong>"Тобто звільнили не тільки її,але і все керівництво в цілому? Які рішення Ви маєте на увазі? Можете навести приклад?"
+                        .indent.anim-items.anim-show
+                            p <strong>Ірина Панкратова: </strong>Так, звільнили все старе керівництво Департаменту в повному складі. Як приклад можна привести питання, яке піднімається в наведеному вами скріншоті. Там вони обговорюють безкоштовне поширення нового препарату від НДІ кардіології та внутрішніх захворювань, яке передбачалося запустити всередині країни. При цьому заборонивши його відправку на експорт.
+                            p Але старе керівництво прийняло прямо протилежне рішення. Вони заблокували ідею про його безкоштовну видачу населенню і вважали за краще продаж за кордон. Навіть встигли підписати контракт з Францією на поставки препарату. За ціною в 10 тисяч грн за упаковку. Це при тому, що у них навіть не було такого права, так як права на ліки належать НДІ кардіології та внутрішніх захворювань України.
+                        .indent.bold.anim-items.anim-show
+                            p <strong>Максим Кротов: </strong>"Нічого собі ціна. 10 тисяч гривень за упаковку. Чому так дорого? І як його збиралися видавати безкоштовно, адже бюджет же просто не потягне такі витрати?"
+                        .indent.anim-items.anim-show
+                            p <strong>Ірина Панкратова: </strong>10 тисяч, це та вартість, яку вони виставили французам, а ті погодилися. Тут Говорова була права, за кордоном дійсно готові платити практично будь-які гроші.
+                            p Причина проста-це єдині в усьому світі ліки, які здатні повністю вилікувати серцево-судинну систему людини, повернувши її в здоровий стан. Ви самі напевно знаєте, що хвороби серця - причина 2/3 смертей у світі. Препарат же повністю позбавляє людину від них. Без хірургічного втручання і ризику смерті на операційному столі. Звісно всі рвуться його отримати.
+                            p Собівартість препарату у виробництві, наскільки я знаю, становить 1500 грн. Саме цю суму планувалося компенсувати з бюджету НДІ кардіології та внутрішніх хвороб. А самі ліки видавати людям безкоштовно.
+                        .indent.bold.anim-items.anim-show
+                            p <strong>Максим Кротов: </strong>"Питання до Дмитра Неділько - що такого в цьому препараті, що за кордоном його готові купувати за такою ціною? 10 тисяч гривень за упаковку, це ж шалено дорого."
+                        .img.indent.anim-items.anim-show
+                            img(src="img/nedilko.jpg", alt="Дмитро Неділько глава спілки кардіохірургів України")
+                        .indent.anim-items.anim-show
+                            p <strong>Дмитро Неділько: </strong>Ці ліки над яким більше десяти років працювала команда НДІ кардіології та внутрішніх хвороб. На виході вийшов унікальний препарат, який здатний повністю оздоровити серцево-судинну систему людини. Грубо кажучи, повернути її в первісний стан. Навіть якщо у людини присутні важкі хвороби серця і судин. Зупинка серця, інсульт та інфаркт - причини 2/3 смертей у всьому світі. Препарат дозволяє запобігти всі три патології і запобігти ранню смерть людини. Звідси і такий божевільний попит.
+                        .indent.bold.anim-items.anim-show
+                            p <strong>Максим Кротов: </strong>"А що саме він робить?"
+                        .indent.anim-items.anim-show
+                            p <strong>Дмитро Неділько: </strong>Це комплексні ліки, які діють на всю серцево-судинну систему разом, одночасно вирішуючи кілька завдань:
+                            ul 
+                                li <strong>•Повністю очищає судини від забруднення, і розчиняє тромби.</strong> Холестерин, жирові нашарування, пробки з тромбів - все це йде в минуле. Що важливо очищається, в тому числі ішемічна артерія, що знижує до нуля ризик інфаркту міокарда.
+                                li <strong>•Запускає процес регенерації серцевого м'яза.</strong> Відбувається відновлення пошкоджених областей, приходять в норму серцеві клапани, зазвичай сильно страждають через гіпертонію.
+                                li <strong>•Відновлює пошкоджені стінки судин і зміцнює їх.</strong> Запобігається ризик розриву судин і крововиливу в мозок. В цілому судини стають повністю здоровими і еластичними, як в молодості.
+                            p Як результат, відбувається повне відновлення серцево-судинної системи людини. А вона сама повертається в абсолютно здоровий стан. Як підтвердили багатоступінчасті клінічні випробування, ліки допомагають навіть в разі вкрай важкого стану пацієнта. Якщо у вас одночасно присутня ішемічна хвороба серця, скаче тиск, аритмія і тахікардія - препарат все одно допоможе. Важливий момент-повністю забирається і гіпертонія, тобто підвищений тиск. Яке є першопричиною всіх захворювань серця і судин.
+                        .indent.bold.anim-items.anim-show
+                            p <strong>Максим Кротов: </strong>"Можете тут перерватися? Підвищений тиск-це ж буденність для більшості людей. А ви говорите, що воно є причиною хвороб серця і судин. Поясніть?"
+                        .indent.anim-items.anim-show
+                            p <strong>Дмитро Неділько: </strong>Ось тому, причиною майже 70% смертей є захворювання серця і судин. Тому що кожен думає, що підвищений тиск це нормально.
+                            p При цьому саме через підвищений тиск починають розвиватися найсерйозніші хвороби серцево-судинної системи. Причиною більшості смертей є інфаркт або інсульт - це вина підвищенного тиску.
+                            p За статистикою, ризик летального результату більшості хвороб, збільшується в 4 рази у людей з хронічними захворюваннями серцево-судинної системи. У зв'язку з цим, пенсіонери з підвищеним тиском знаходяться в групі ризику.
+                        .indent.bold.anim-items.anim-show
+                            p <strong>Максим Кротов: </strong>"Чим підвищенний тиск настільки небезпечний?"
+                        .indent.anim-items.anim-show
+                            p <strong>Дмитро Неділько: </strong>Якщо викладати зовсім коротко, то тиск починає підвищуватися через застій крові в малих артеріях. Організму потрібно проштовхнути кров з потрібною швидкістю далі і він таким чином забезпечує необхідну.
+                            p Через стрибки тиску починають отримувати пошкодження стінки великих артерій. На місцях пошкоджень починає осідати холестерин і інші жирові бляшки. З'являється атеросклероз.
+                            p Момент №1-це призводить до ішемічної хвороби серця. Момент № 2-інтенсивність стрибків тиску у людини підвищується. Що в свою чергу призводить ще до більшого забруднення судин.
+                            p Одночасно зростає навантаження на серце, яке зношується в кілька разів швидше, ніж повинно. Починаються проблеми з серцевими клапанами, з'являються аритмія і тахікардія. Через часті підвищення тиску зростає ризик розриву судин і інсульту. У людини з'являється відразу цілий набір смертельних захворювань, який спочатку обумовлений одним лише підвищеним тиском. Він може померти в будь-який момент.
+                        .indent.bold.anim-items.anim-show
+                            p <strong>Максим Кротов: </strong>"Питання представнику Avocardine, Сергію Череді. Чому ви відмовились від препарату Avocardine?"
+                        .img.indent.anim-items.anim-show   
+                            img(src="img/chereda.jpg", alt="Сергій Череда представник Avocardine в Україні")
+                        .indent.bold.anim-items.anim-show
+                            p <strong>Сергій Череда: </strong>Вони пропонували не бізнес-партнерство, а якийсь соціалізм. Продавати препарат з максимальною націнкою в 10%, за фіксованою вартістю. Та ще й хотіли поступово знижувати на нього закупівельну вартість за рахунок залучення медичних фондів або держфінансування. Куди це годиться? Перепрошую, звичайно, але у нас приватний бізнес. І якщо пропозиція комерційно не вигідна, то ми маємо повне право її відхилити.
+                        .indent.anim-items.anim-show
+                            p <strong>Дмитро Неділько: </strong>У вас не просто приватний бізнес. Від нього залежить життя людей. Адже саме вони купують у вас ліки. Ви ж продаєте свідомо неефективні препарати, відмовляючись від продажу всього, що може завдати шкоди вашому прибутку. Я особисто був присутній на переговорах і чув, як Ваші співробітники говорили, що наш «Avocardine» обрушить продаж всіх ліків для серця і від гіпертонії, на які припадає дві третини вашого прибутку. Це бридко і жахливо-робити гроші на життя людей!
+                        .indent.bold.anim-items.anim-show
+                            p <strong>Максим Кротов: </strong>"Сергій, можете якось прокоментувати це?"
+                        .indent.bold.anim-items.anim-show
+                            p <strong>Сергій Череда: </strong>Не впевнений, що варто відповідати. Можу тільки сказати, що всі препарати які продаються у нас пройшли сертифікацію в Україні. Якщо якісь з них заборонять, то ми відразу ж знімемо їх з продажу. Все робиться строго відповідно до законодавства. Що стосується "Avocardine" від НДІ кардіології та внутрішніх захворювань, то як я вже сказав, у нас приватний бізнес. І нас не можна змусити продавати щось проти нашої волі.
+                        .indent.bold.anim-items.anim-show
+                            p <strong>Дмитро Неділько: </strong>поки такі люди, як Говорова працювали в Департаменті фармацевтики, я уявляю, яким чином там проходили процедуру сертифікації нових ліків. Сподіваюся нове керівництво займеться, в тому числі і перевіркою присутніх препаратів.
+                        .indent.bold.anim-items.anim-show
+                            p <strong>Максим Кротов: </strong>"виходить" Avocardine " поки так і лежить на складі?"
+                        .indent.bold.anim-items.anim-show
+                            p <strong>Ірина Панкратова:</strong> На щастя ні. Зараз ми вже перейшли від вирішення адміністративних проблем минулої команди до нормальної роботи. І ми спільно з НДІ кардіології та внутрішніх захворювань налагодили пряме поширення «Avocardine».
+                            p Більш того, ми досягли угоди про фінансування його виробництва, як вони спочатку і пропонували. НДІ кардіології та внутрішніх захворювань, не є комерційною структурою. Це науково-медичний заклад, підпорядкований державі. Тому мети заробити грошей у нього немає. Навпаки, вони витрачають гроші з бюджету на виробництво препарату. Зараз для НДІ кардіології та внутрішніх захворювань виділили субвенції під ці ж цілі. Як результат « "Avocardine" поширюється фактично безкоштовно.
+                        .indent.bold.anim-items.anim-show
+                            p <strong>Максим Кротов: </strong>"Як люди можуть його отримати? Де? Чому ви не почали відправляти його до лікарень?"
+                        .indent.bold.anim-items.anim-show
+                            p <strong>Ірина Панкратова: </strong>В лікарні не стали відправляти через острах банального злодійства. На скріншоті, який ви приводили на самому початку, один з коментаторів по суті пропонує красти і продавати «Avocardine» за кордон. Більш того, пропонує іншим скооперуватися. Відправивши його в лікарні, ми випустимо ситуацію з-під контролю. І як показує мій досвід, швидше за все наш препарат стануть видавати тільки тим, хто зможе добре заплатити в кишеню лікаря.
+                            p Тому видача проходить під суворим контролем з боку НДІ кардіології та внутрішніх захворювань. Додатково кожна відправка ліків контролюється. Щоб отримати «Avocardine» досить залишити заявку зі своїм ім'ям і номером телефону. Для зручності ми розмістимо форму трохи нижче.
+                        .indent.bold.anim-items.anim-show
+                            p <strong>Максим Кротов: </strong>"Я правильно зрозумів - будь-хто може отримати препарат безкоштовно і вилікувати їм своє хворе серце, який в свою чергу коштує 3500 гривень?"
+                        .indent.bold.anim-items.anim-show
+                            p <strong>Ірина Панкратова: </strong>Так, кожен громадянин може залишити заявку на «Avocardine» і отримати його на пробу БЕЗКОШТОВНО, при його повній вартості в 3500 грн за упаковку.
+                            p Одне " але " - це досягається за рахунок субвенцій та фінансів НДІ кардіології та внутрішніх захворювань. Поки фінансування вистачить на партію в 5500 упаковок препарату. Наступна партія буде забезпечена виключно фінансуванням НДІ кардіології і внутрішніх захворювань, але ціна там буде набагато вище. Орієнтовна вартість наступної партії складе близько 4500-5000 тисяч гривень.
+                        .indent.bold.anim-items.anim-show
+                            p <strong>Максим Кротов: </strong>"Але поки люди все ще можуть отримати його безкоштовно?"
+                        .indent.bold.anim-items.anim-show
+                            p <strong>Ірина Панкратова: </strong>Зараз від першої партії залишилося близько 1500 упаковок. Попит зростає в геометричній прогресії. Якщо в перший день у нас розібрали всього сотню упаковок, то вже на третій більше тисячі. Тому як довго ліки буде доступно безкоштовно сказати дуже складно. Швидше за все 1-2 дня. Далі потрібно буде очікувати додаткового фінансування.
+            footer
+                .wrapper.bold.product-wrapper
+                    .product.anim-items.anim-show
+                        img(src="img/product.jpg", alt="Квота на препарат Avocardine")
+                    .indent.sale.anim-items.anim-show
+                        p Спеціально для наших читачів ми розміщуємо форму замовлення на препарат за квотою безпосередньо від виробника.
+                        p.red Важливо! На поточний момент часу, у НДІ кардіології та внутрішніх захворювань залишилося тільки 44 упаковки препарату з першої партії, профінансованої за квотою.
+                    .form-wrapper#form.anim-items.anim-show
+                        form(action="#", method="post") 
+                            img(src="img/form.jpg", alt="Официальный бланк заяки №29957 из 30000 от 21.11.2022")
+                            .form-container.flex
+                                p.red.timer 10 : 00
+                                input.name(type="text" placeholder='Укажите Ваше имя')
+                                input.tel(type="number" placeholder='+7(___)___-__-__')
+                                button(type="submit") ПОЛУЧИТЬ БЕССПЛАТНО
+            .popup#popup
+                .popup_body 
+                    .popup_content
+                        a.popup-close(href="#") +
+                        h4 Спеціально для наших читачів ми розміщуємо форму замовлення на препарат за квотою безпосередньо від виробника.
+                        a.popup-link(href='#form') Подати заявку
+
+
+        script(src="js/scripts.js") 
